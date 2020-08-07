@@ -14,7 +14,7 @@ stages {
   stage('Build') {
     when {
       anyOf {
-        expression { params.skipBuild == 'yes'}
+        expression { params.skipBuild == 'true'}
       }
     }
     steps{
