@@ -1,6 +1,3 @@
-
-
-
 pipeline{
     agent any
     parameters {
@@ -32,4 +29,25 @@ pipeline{
                 echo '*******Executing Build Step*******'
             }
         }
+        stage('sonar'){
+          when {
+            anyOf{
+              expression { params.scanOnly == 'yes' }
+              expression { params.dockerPush == 'yes' }
+            }
+          }
+          steps{
+            echo "*******Executing Sonar Scan********"
+          }
+        }
+        stage('Security Scan'){
+          when {
+            expression { params.scanOnly == 'yes' }
+          }
+          steps{
+            echo '*********Executing Security Scan*******'
+          }
+        }
     }
+
+}
