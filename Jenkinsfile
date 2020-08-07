@@ -6,7 +6,7 @@ pipeline{
   parameters{
                  booleanParam(name: 'skipBuild',
                               defaultValue: false,
-                              description: "well, no description"
+                              description: 'well, no description'
                               )
                 choice(name: 'BuildOnly',
                        defaultValue: 'yes',
