@@ -28,7 +28,7 @@ stages {
   }
   stage('Test'){
     steps{
-             echo "second world \$\(pwd\)"
+             echo "second world \$(pwd)"
             
              
     }
