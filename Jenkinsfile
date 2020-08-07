@@ -9,7 +9,7 @@ pipeline{
                               description: 'well, no description'
                               )
                 choice(name: 'BuildOnly',
-                       defaultValue: 'yes',
+                       
                        choices: 'no\nyes'
                        )
   }
@@ -29,6 +29,8 @@ stages {
   stage('Test'){
     steps{
              echo "second world"
+             pwd
+             env
     }
   }
 }
