@@ -13,7 +13,7 @@ pipeline{
 stages {
   stage('Build') {
     when {
-      anyof {
+      anyOf {
         expression { params.skipBuild == 'yes'}
       }
     }
