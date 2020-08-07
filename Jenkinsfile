@@ -10,5 +10,10 @@ stages {
            echo 'hellow world'
     }
   }
+  stage('Test'){
+    steps{
+             echo "second world"
+    }
+  }
 }
 }	
