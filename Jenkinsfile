@@ -3,6 +3,12 @@ pipeline{
   
   agent any 
   
+  parameters{
+                 booleanParam(name: 'skipBuild',
+                              defaultValue: false,
+                              description: "well, no description"
+                              )
+  }
 
 stages {
   stage('Build') {
