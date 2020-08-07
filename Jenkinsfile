@@ -29,6 +29,7 @@ stages {
   stage('Test'){
     steps{
              echo "second world \$(pwd)"
+             sh script: 'pwd'
             
              
     }
