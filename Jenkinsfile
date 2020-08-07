@@ -28,9 +28,9 @@ stages {
   }
   stage('Test'){
     steps{
-             echo "second world"
-             pwd
-             env
+             echo "second world $(pwd)"
+            
+             
     }
   }
 }
