@@ -12,6 +12,11 @@ pipeline{
 
 stages {
   stage('Build') {
+    when {
+      anyof {
+        expression { params.skipBuild == 'yes'}
+      }
+    }
     steps{
            echo 'hellow world'
     }
