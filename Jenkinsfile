@@ -8,6 +8,10 @@ pipeline{
                               defaultValue: false,
                               description: "well, no description"
                               )
+                choice(name: 'BuildOnly',
+                       defaultValue: 'yes',
+                       choices: 'no\nyes'
+                       )
   }
 
 stages {
@@ -15,6 +19,7 @@ stages {
     when {
       anyOf {
         expression { params.skipBuild == 'true'}
+        expression { params.BuildOnly == 'yes'}
       }
     }
     steps{
