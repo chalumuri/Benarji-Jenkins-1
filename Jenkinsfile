@@ -27,7 +27,7 @@ stages {
     }
   }
   stage('Test'){
-    environment { aws_key = credentials('githubuser') }
+    environment { githubuser = credentials('githubuser') }
     steps{
              echo "second world \$(pwd)"
              sh script: 'env'
