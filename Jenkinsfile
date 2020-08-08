@@ -1,8 +1,7 @@
 
 pipeline{
   
-  agent {docker { label 'xyz' 
-                  image 'alpine:3.8' } }
+  agent  any
  
   parameters{
                  booleanParam(name: 'skipBuild',
