@@ -1,8 +1,8 @@
 
 pipeline{
   
-  agent any 
-  
+  agent {docker { image 'alpine:3.8' } }
+ 
   parameters{
                  booleanParam(name: 'skipBuild',
                               defaultValue: false,
