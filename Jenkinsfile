@@ -32,6 +32,7 @@ stages {
     steps{
              echo "second world \$(pwd)"
              sh script: 'env'
+             sh script: 'aws --help'
             
              
     }
