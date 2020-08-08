@@ -32,7 +32,7 @@ stages {
     steps{
              echo "second world \$(pwd)"
              sh script: 'env'
-             sh script: 'apt-get update && apt-get install awscli'
+             sh script: 'sudo apt-get update && sudo apt-get install awscli'
               sh 'aws --version'
             
              
